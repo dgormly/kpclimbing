@@ -10,7 +10,7 @@ import Foundation
 
 protocol Dao {
     
-    func create() -> AnyObject
+    func create(item: AnyObject) -> Bool
     
     func read(name: String) -> AnyObject
     

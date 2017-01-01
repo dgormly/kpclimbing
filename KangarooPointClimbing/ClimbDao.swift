@@ -10,8 +10,14 @@ import Foundation
 
 class ClimbDao : Dao {
     
-    func create() -> AnyObject {
-        return Climb()
+    private var climbList = [Climb]()
+    
+    func create(item: AnyObject) -> Bool {
+        guard let climb = item as? Climb else {
+            return false
+        }
+        climbList.append(climb)
+        return true
     }
     
     func read(name: String) -> AnyObject {
@@ -19,26 +25,33 @@ class ClimbDao : Dao {
     }
     
     func readAll() -> [AnyObject] {
-        var climbs = [Climb]()
+        if climbList.count == 0 {
+            let names = ["Bomb", "Idiot Wing", "Date Anatomy"]
+            let rating = [10, 17, 12]
+            let desc = "Pretty hard"
         
-        let names = ["Bomb", "Idiot Wing", "Date Anatomy"]
-        let rating = [10, 17, 12]
-        let desc = "Pretty hard"
-        
-        for i in 0..<3 {
-            let climb = Climb()
-            climb.name = names[i]
-            climb.desc = desc
-            climb.rating = Int8(rating[i])
+            for i in 0..<3 {
+                let climb = Climb()
+                climb.name = names[i]
+                climb.desc = desc
+                climb.rating = Int(rating[i])
             
-            climbs.append(climb)
+                climbList.append(climb)
+            }
         }
         
-        return climbs
+        return climbList
     }
     
     func update(item: AnyObject) -> Bool {
-        return true
+        if let index = climbList.index(of: item as! Climb) {
+            climbList.remove(at: index)
+            print("Climb removed")
+            return true
+        } else {
+            print("Failed to remove climb.")
+            return false
+        }
     }
     
     func delete(item: AnyObject) -> Bool {

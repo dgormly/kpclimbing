@@ -12,6 +12,7 @@ class Climb : NSObject {
     
     var name: String = ""
     var desc: String = ""
-    var rating: Int8 = 0
+    var rating: Int = 0
+    var wall: String = ""
     
 } 
