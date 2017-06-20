@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3418E83FD4882DF572171569 /* Pods_KangarooPointClimbingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFCB06C0833172A8718A5AA /* Pods_KangarooPointClimbingUITests.framework */; };
+		3D4787A69F03F446B482008E /* Pods_KangarooPointClimbingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988E98BC49EAA5149ADC947D /* Pods_KangarooPointClimbingTests.framework */; };
+		571A8B6248902C7E4416EA95 /* Pods_KangarooPointClimbing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6741F3EF678E553A3440916C /* Pods_KangarooPointClimbing.framework */; };
+		A32C35291ED41B2B003832A0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C35281ED41B2B003832A0 /* FBSDKLoginKit.framework */; };
+		A32C352B1ED41B5A003832A0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C352A1ED41B5A003832A0 /* FBSDKCoreKit.framework */; };
+		A32C352D1ED41BCF003832A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C352C1ED41BCF003832A0 /* Bolts.framework */; };
+		A32C35301ED51408003832A0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C352F1ED51408003832A0 /* MapViewController.swift */; };
+		A32C35321ED5208F003832A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C35311ED5208F003832A0 /* MapKit.framework */; };
+		A32C35341ED53568003832A0 /* ClimbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C35331ED53568003832A0 /* ClimbData.swift */; };
+		A34A0F6A1EF9223F003CA246 /* ClimbDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */; };
 		A3B8958E1ED4106D00C0209D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958D1ED4106D00C0209D /* AppDelegate.swift */; };
 		A3B895901ED4106D00C0209D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958F1ED4106D00C0209D /* ViewController.swift */; };
 		A3B895931ED4106D00C0209D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B895911ED4106D00C0209D /* Main.storyboard */; };
@@ -15,6 +25,7 @@
 		A3B8959B1ED4106D00C0209D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B895991ED4106D00C0209D /* LaunchScreen.storyboard */; };
 		A3B895A61ED4106D00C0209D /* KangarooPointClimbingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B895A51ED4106D00C0209D /* KangarooPointClimbingTests.swift */; };
 		A3B895B11ED4106D00C0209D /* KangarooPointClimbingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B895B01ED4106D00C0209D /* KangarooPointClimbingUITests.swift */; };
+		A3B895BF1ED410BA00C0209D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3B895BE1ED410BA00C0209D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5773551661BB37E1363F22 /* Pods-KangarooPointClimbingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangarooPointClimbingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangarooPointClimbingUITests/Pods-KangarooPointClimbingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		30C845445A31F3D4A68A4DB7 /* Pods-KangarooPointClimbing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangarooPointClimbing.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangarooPointClimbing/Pods-KangarooPointClimbing.release.xcconfig"; sourceTree = "<group>"; };
+		6741F3EF678E553A3440916C /* Pods_KangarooPointClimbing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KangarooPointClimbing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFCB06C0833172A8718A5AA /* Pods_KangarooPointClimbingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KangarooPointClimbingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C463A25185207BDEB799D3 /* Pods-KangarooPointClimbingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangarooPointClimbingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangarooPointClimbingUITests/Pods-KangarooPointClimbingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8466E128B81391EA9475F17A /* Pods-KangarooPointClimbingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangarooPointClimbingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangarooPointClimbingTests/Pods-KangarooPointClimbingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		988E98BC49EAA5149ADC947D /* Pods_KangarooPointClimbingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KangarooPointClimbingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32C35281ED41B2B003832A0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A32C352A1ED41B5A003832A0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		A32C352C1ED41BCF003832A0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
+		A32C352E1ED50EA6003832A0 /* KangarooPointClimbing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KangarooPointClimbing.entitlements; sourceTree = "<group>"; };
+		A32C352F1ED51408003832A0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A32C35311ED5208F003832A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A32C35331ED53568003832A0 /* ClimbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbData.swift; sourceTree = "<group>"; };
+		A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbDetailViewController.swift; sourceTree = "<group>"; };
 		A3B8958A1ED4106D00C0209D /* KangarooPointClimbing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangarooPointClimbing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B8958D1ED4106D00C0209D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B8958F1ED4106D00C0209D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +75,9 @@
 		A3B895AC1ED4106D00C0209D /* KangarooPointClimbingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KangarooPointClimbingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B895B01ED4106D00C0209D /* KangarooPointClimbingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KangarooPointClimbingUITests.swift; sourceTree = "<group>"; };
 		A3B895B21ED4106D00C0209D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3B895BE1ED410BA00C0209D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D09D6D9DFC0FFCC43EA9F42F /* Pods-KangarooPointClimbingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangarooPointClimbingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KangarooPointClimbingTests/Pods-KangarooPointClimbingTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC3F9FC3F73E49C1B38AD8FC /* Pods-KangarooPointClimbing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KangarooPointClimbing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KangarooPointClimbing/Pods-KangarooPointClimbing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32C35291ED41B2B003832A0 /* FBSDKLoginKit.framework in Frameworks */,
+				A32C352B1ED41B5A003832A0 /* FBSDKCoreKit.framework in Frameworks */,
+				A32C35321ED5208F003832A0 /* MapKit.framework in Frameworks */,
+				571A8B6248902C7E4416EA95 /* Pods_KangarooPointClimbing.framework in Frameworks */,
+				A32C352D1ED41BCF003832A0 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4787A69F03F446B482008E /* Pods_KangarooPointClimbingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +105,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3418E83FD4882DF572171569 /* Pods_KangarooPointClimbingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB380A6DFCE1826E5984A26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC3F9FC3F73E49C1B38AD8FC /* Pods-KangarooPointClimbing.debug.xcconfig */,
+				30C845445A31F3D4A68A4DB7 /* Pods-KangarooPointClimbing.release.xcconfig */,
+				8466E128B81391EA9475F17A /* Pods-KangarooPointClimbingTests.debug.xcconfig */,
+				D09D6D9DFC0FFCC43EA9F42F /* Pods-KangarooPointClimbingTests.release.xcconfig */,
+				0C5773551661BB37E1363F22 /* Pods-KangarooPointClimbingUITests.debug.xcconfig */,
+				75C463A25185207BDEB799D3 /* Pods-KangarooPointClimbingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		752D17A437E95007E7E9E122 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32C35311ED5208F003832A0 /* MapKit.framework */,
+				A32C352C1ED41BCF003832A0 /* Bolts.framework */,
+				A32C352A1ED41B5A003832A0 /* FBSDKCoreKit.framework */,
+				A32C35281ED41B2B003832A0 /* FBSDKLoginKit.framework */,
+				6741F3EF678E553A3440916C /* Pods_KangarooPointClimbing.framework */,
+				988E98BC49EAA5149ADC947D /* Pods_KangarooPointClimbingTests.framework */,
+				6BFCB06C0833172A8718A5AA /* Pods_KangarooPointClimbingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A3B895811ED4106C00C0209D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +146,8 @@
 				A3B895A41ED4106D00C0209D /* KangarooPointClimbingTests */,
 				A3B895AF1ED4106D00C0209D /* KangarooPointClimbingUITests */,
 				A3B8958B1ED4106D00C0209D /* Products */,
+				0DB380A6DFCE1826E5984A26 /* Pods */,
+				752D17A437E95007E7E9E122 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +164,18 @@
 		A3B8958C1ED4106D00C0209D /* KangarooPointClimbing */ = {
 			isa = PBXGroup;
 			children = (
+				A32C352E1ED50EA6003832A0 /* KangarooPointClimbing.entitlements */,
 				A3B8958D1ED4106D00C0209D /* AppDelegate.swift */,
 				A3B8958F1ED4106D00C0209D /* ViewController.swift */,
+				A32C35331ED53568003832A0 /* ClimbData.swift */,
 				A3B895911ED4106D00C0209D /* Main.storyboard */,
+				A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */,
+				A32C352F1ED51408003832A0 /* MapViewController.swift */,
 				A3B895971ED4106D00C0209D /* Assets.xcassets */,
 				A3B895991ED4106D00C0209D /* LaunchScreen.storyboard */,
 				A3B8959C1ED4106D00C0209D /* Info.plist */,
 				A3B895941ED4106D00C0209D /* KangarooPointClimbing.xcdatamodeld */,
+				A3B895BE1ED410BA00C0209D /* GoogleService-Info.plist */,
 			);
 			path = KangarooPointClimbing;
 			sourceTree = "<group>";
@@ -135,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3B895B51ED4106D00C0209D /* Build configuration list for PBXNativeTarget "KangarooPointClimbing" */;
 			buildPhases = (
+				82F0F56356DB00CB1DFB2EA7 /* [CP] Check Pods Manifest.lock */,
 				A3B895861ED4106D00C0209D /* Sources */,
 				A3B895871ED4106D00C0209D /* Frameworks */,
 				A3B895881ED4106D00C0209D /* Resources */,
+				DCC79489BF77403F56367EB5 /* [CP] Embed Pods Frameworks */,
+				77DFD3A868988856E3819FC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3B895B81ED4106D00C0209D /* Build configuration list for PBXNativeTarget "KangarooPointClimbingTests" */;
 			buildPhases = (
+				E3F48CDD9A9B4141C136D460 /* [CP] Check Pods Manifest.lock */,
 				A3B8959D1ED4106D00C0209D /* Sources */,
 				A3B8959E1ED4106D00C0209D /* Frameworks */,
 				A3B8959F1ED4106D00C0209D /* Resources */,
+				38182733490E6190EF549E95 /* [CP] Embed Pods Frameworks */,
+				C6D2BA63B7D1A7663C47FB69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3B895BB1ED4106D00C0209D /* Build configuration list for PBXNativeTarget "KangarooPointClimbingUITests" */;
 			buildPhases = (
+				87E5DA8265FAD60F2BEE1143 /* [CP] Check Pods Manifest.lock */,
 				A3B895A81ED4106D00C0209D /* Sources */,
 				A3B895A91ED4106D00C0209D /* Frameworks */,
 				A3B895AA1ED4106D00C0209D /* Resources */,
+				185EBF9ADFF98A25C1896983 /* [CP] Embed Pods Frameworks */,
+				672B2D4D78D218914ECC5236 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +277,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DVW823U8AX;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A3B895A01ED4106D00C0209D = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -239,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B8959B1ED4106D00C0209D /* LaunchScreen.storyboard in Resources */,
+				A3B895BF1ED410BA00C0209D /* GoogleService-Info.plist in Resources */,
 				A3B895981ED4106D00C0209D /* Assets.xcassets in Resources */,
 				A3B895931ED4106D00C0209D /* Main.storyboard in Resources */,
 			);
@@ -260,14 +348,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		185EBF9ADFF98A25C1896983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KangarooPointClimbingUITests/Pods-KangarooPointClimbingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38182733490E6190EF549E95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KangarooPointClimbingTests/Pods-KangarooPointClimbingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		672B2D4D78D218914ECC5236 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KangarooPointClimbingUITests/Pods-KangarooPointClimbingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77DFD3A868988856E3819FC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KangarooPointClimbing/Pods-KangarooPointClimbing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F0F56356DB00CB1DFB2EA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		87E5DA8265FAD60F2BEE1143 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6D2BA63B7D1A7663C47FB69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KangarooPointClimbingTests/Pods-KangarooPointClimbingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCC79489BF77403F56367EB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KangarooPointClimbing/Pods-KangarooPointClimbing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F48CDD9A9B4141C136D460 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A3B895861ED4106D00C0209D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A3B895961ED4106D00C0209D /* KangarooPointClimbing.xcdatamodeld in Sources */,
+				A34A0F6A1EF9223F003CA246 /* ClimbDetailViewController.swift in Sources */,
 				A3B895901ED4106D00C0209D /* ViewController.swift in Sources */,
 				A3B8958E1ED4106D00C0209D /* AppDelegate.swift in Sources */,
+				A32C35301ED51408003832A0 /* MapViewController.swift in Sources */,
+				A32C35341ED53568003832A0 /* ClimbData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +646,21 @@
 		};
 		A3B895B61ED4106D00C0209D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC3F9FC3F73E49C1B38AD8FC /* Pods-KangarooPointClimbing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KangarooPointClimbing/KangarooPointClimbing.entitlements;
 				DEVELOPMENT_TEAM = DVW823U8AX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"~/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = KangarooPointClimbing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.procrastix.climbing.KangarooPointClimbing;
@@ -430,9 +671,21 @@
 		};
 		A3B895B71ED4106D00C0209D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30C845445A31F3D4A68A4DB7 /* Pods-KangarooPointClimbing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KangarooPointClimbing/KangarooPointClimbing.entitlements;
 				DEVELOPMENT_TEAM = DVW823U8AX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GTMSessionFetcher\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GoogleToolboxForMac\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseAuth/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseCore/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"~/Documents/FacebookSDK",
+				);
 				INFOPLIST_FILE = KangarooPointClimbing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.procrastix.climbing.KangarooPointClimbing;
@@ -443,6 +696,7 @@
 		};
 		A3B895B91ED4106D00C0209D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8466E128B81391EA9475F17A /* Pods-KangarooPointClimbingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +712,7 @@
 		};
 		A3B895BA1ED4106D00C0209D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09D6D9DFC0FFCC43EA9F42F /* Pods-KangarooPointClimbingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +728,7 @@
 		};
 		A3B895BC1ED4106D00C0209D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5773551661BB37E1363F22 /* Pods-KangarooPointClimbingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DVW823U8AX;
@@ -487,6 +743,7 @@
 		};
 		A3B895BD1ED4106D00C0209D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C463A25185207BDEB799D3 /* Pods-KangarooPointClimbingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DVW823U8AX;
@@ -518,6 +775,7 @@
 				A3B895B71ED4106D00C0209D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3B895B81ED4106D00C0209D /* Build configuration list for PBXNativeTarget "KangarooPointClimbingTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +784,7 @@
 				A3B895BA1ED4106D00C0209D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3B895BB1ED4106D00C0209D /* Build configuration list for PBXNativeTarget "KangarooPointClimbingUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +793,7 @@
 				A3B895BD1ED4106D00C0209D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
