@@ -16,7 +16,9 @@
 		A32C35301ED51408003832A0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C352F1ED51408003832A0 /* MapViewController.swift */; };
 		A32C35321ED5208F003832A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C35311ED5208F003832A0 /* MapKit.framework */; };
 		A32C35341ED53568003832A0 /* ClimbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C35331ED53568003832A0 /* ClimbData.swift */; };
+		A340AE151F053A4800913902 /* ClimbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340AE141F053A4800913902 /* ClimbCell.swift */; };
 		A34A0F6A1EF9223F003CA246 /* ClimbDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */; };
+		A37710711F05239300D65507 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37710701F05239300D65507 /* HomeViewController.swift */; };
 		A3B8958E1ED4106D00C0209D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958D1ED4106D00C0209D /* AppDelegate.swift */; };
 		A3B895901ED4106D00C0209D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958F1ED4106D00C0209D /* ViewController.swift */; };
 		A3B895931ED4106D00C0209D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B895911ED4106D00C0209D /* Main.storyboard */; };
@@ -60,7 +62,9 @@
 		A32C352F1ED51408003832A0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A32C35311ED5208F003832A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A32C35331ED53568003832A0 /* ClimbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbData.swift; sourceTree = "<group>"; };
+		A340AE141F053A4800913902 /* ClimbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbCell.swift; sourceTree = "<group>"; };
 		A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbDetailViewController.swift; sourceTree = "<group>"; };
+		A37710701F05239300D65507 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3B8958A1ED4106D00C0209D /* KangarooPointClimbing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangarooPointClimbing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B8958D1ED4106D00C0209D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B8958F1ED4106D00C0209D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +172,9 @@
 				A3B8958D1ED4106D00C0209D /* AppDelegate.swift */,
 				A3B8958F1ED4106D00C0209D /* ViewController.swift */,
 				A32C35331ED53568003832A0 /* ClimbData.swift */,
+				A340AE141F053A4800913902 /* ClimbCell.swift */,
 				A3B895911ED4106D00C0209D /* Main.storyboard */,
+				A37710701F05239300D65507 /* HomeViewController.swift */,
 				A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */,
 				A32C352F1ED51408003832A0 /* MapViewController.swift */,
 				A3B895971ED4106D00C0209D /* Assets.xcassets */,
@@ -492,10 +498,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B895961ED4106D00C0209D /* KangarooPointClimbing.xcdatamodeld in Sources */,
+				A340AE151F053A4800913902 /* ClimbCell.swift in Sources */,
 				A34A0F6A1EF9223F003CA246 /* ClimbDetailViewController.swift in Sources */,
 				A3B895901ED4106D00C0209D /* ViewController.swift in Sources */,
 				A3B8958E1ED4106D00C0209D /* AppDelegate.swift in Sources */,
 				A32C35301ED51408003832A0 /* MapViewController.swift in Sources */,
+				A37710711F05239300D65507 /* HomeViewController.swift in Sources */,
 				A32C35341ED53568003832A0 /* ClimbData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
