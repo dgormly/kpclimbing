@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y6t-NX-1kY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,10 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="Y6t-NX-1kY" kind="show" identifier="LoginSegue" id="pOo-eL-8qQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="135"/>
+            <point key="canvasLocation" x="1954" y="-214"/>
         </scene>
         <!--KP Climbing-->
         <scene sceneID="Loc-GC-dmK">
@@ -110,6 +113,13 @@
                                 <rect key="frame" x="0.0" y="42" width="414" height="630"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Iuu-MV-oPh">
+                                <rect key="frame" x="176.66666666666666" y="306" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Oc9-On-t9d"/>
+                                    <constraint firstAttribute="width" constant="60" id="laW-hL-ZlW"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-ar-e1o">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
                                 <subviews>
@@ -145,6 +155,8 @@
                             <constraint firstItem="E3E-ar-e1o" firstAttribute="trailing" secondItem="ckS-qa-voH" secondAttribute="trailing" id="CFK-Kk-04I"/>
                             <constraint firstItem="E3E-ar-e1o" firstAttribute="leading" secondItem="ckS-qa-voH" secondAttribute="leading" id="KKh-bq-lTi"/>
                             <constraint firstItem="E3E-ar-e1o" firstAttribute="top" secondItem="nlx-3V-qmf" secondAttribute="bottom" id="LYb-O0-2rh"/>
+                            <constraint firstItem="Iuu-MV-oPh" firstAttribute="centerX" secondItem="L5s-zd-Ekr" secondAttribute="centerX" id="PnW-a6-PKh"/>
+                            <constraint firstItem="Iuu-MV-oPh" firstAttribute="centerY" secondItem="L5s-zd-Ekr" secondAttribute="centerY" id="lpa-G2-O6e"/>
                             <constraint firstAttribute="trailing" secondItem="E3E-ar-e1o" secondAttribute="trailing" id="pKf-ni-JAC"/>
                             <constraint firstItem="E3E-ar-e1o" firstAttribute="leading" secondItem="L5s-zd-Ekr" secondAttribute="leading" id="qCq-yp-01I"/>
                         </constraints>
@@ -157,6 +169,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="Iuu-MV-oPh" id="aKt-Ia-F3p"/>
                         <outlet property="table" destination="ckS-qa-voH" id="O2g-6Z-aCe"/>
                         <segue destination="1Lb-S6-hq2" kind="show" identifier="showClimbSegue" id="bhT-nf-RsH"/>
                     </connections>

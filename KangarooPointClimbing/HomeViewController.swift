@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var cell: UITableViewCell!
     
@@ -17,20 +18,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         table.delegate = self
         table.dataSource = self
         let nib = UINib(nibName: "ClimbCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "climbCell")
         
+        activityIndicatorView.startAnimating()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Load climbs
-        climbList = climbDao.readAll() as! [Climb]
+        climbDao.readAll(completionHandler: { climb in
+            self.climbList = climb
+            self.table.reloadData()
+            self.activityIndicatorView.stopAnimating()
+        })
     }
     
     // MARK: Must implement these.
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return climbList.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "climbCell") as! ClimbCell
@@ -42,6 +53,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.selectionStyle = .none
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showClimbSegue", sender: nil)
