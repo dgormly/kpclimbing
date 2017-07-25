@@ -20,12 +20,18 @@ class ClimbDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
+    var climb = Climb()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         loadMap()
+        self.title = climb.name
+        locationLabel.text = climb.wall
+        difficultyLabel.text = String(climb.rating)
     }
+
     
     func loadMap() {
         let annotation = MKPointAnnotation()

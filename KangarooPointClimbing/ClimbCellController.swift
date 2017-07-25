@@ -14,6 +14,7 @@ class ClimbCell: UITableViewCell {
     @IBOutlet weak var initialView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var difRatingLabel: UILabel!
+    @IBOutlet weak var wallLabel: UILabel!
   
     
     override func setSelected(_ selected: Bool, animated: Bool) {

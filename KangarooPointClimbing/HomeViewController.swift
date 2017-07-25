@@ -46,16 +46,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "climbCell") as! ClimbCell
         let name = climbList[indexPath.row].name
-        let index = name.index(name.startIndex, offsetBy: 1)
-        cell.initialLabel.text = name.substring(to: index).uppercased()
+
+        // Split name up for initials
+        let nameArray = name.characters.split(separator: " ")
+        var initials = ""
+        for i in nameArray {
+             initials += String(i.prefix(1))
+        }
+        
+        cell.initialLabel.text = initials.uppercased()
         cell.nameLabel.text = name
-        cell.difRatingLabel.text = "Difficulty: " + String(climbList[indexPath.row].rating)
+        cell.difRatingLabel.text = "Difficulty: \(climbList[indexPath.row].rating)"
+        cell.wallLabel.text = climbList[indexPath.row].wall
         cell.selectionStyle = .none
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showClimbSegue", sender: nil)
+        performSegue(withIdentifier: "showClimbSegue", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showClimbSegue" {
+            let indexPath = sender as! IndexPath
+            let row = indexPath.row
+            let vc = segue.destination as! ClimbDetailViewController
+            vc.climb = climbList[row]
+        }
     }
 }

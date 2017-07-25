@@ -30,10 +30,15 @@ class ClimbDao {
     
     func read(name: String) -> AnyObject {
         let ref = Database.database().reference()
+        let climb = Climb()
         ref.child("climbs").child(name).observeSingleEvent(of: .value, with: { snapshot in
-            print(snapshot)
+            let snapshotValue = snapshot.value as? [String : AnyObject] ?? [:]
+            climb.name = snapshot.key
+            climb.rating = snapshotValue["rating"] as! Int
+            climb.wall = snapshotValue["wall"] as! String
+            
         })
-        return Climb()
+        return climb
     }
     
     
@@ -54,21 +59,10 @@ class ClimbDao {
             
             completionHandler(climbList)
         })
-//
-//        if climbList.count == 0 {
-//            let names = ["Bomb", "Idiot Wing", "Date Anatomy"]
-//            let rating = [10, 17, 12]
-//            let desc = "Pretty hard"
-//        
-//            for i in 0..<3 {
-//                let climb = Climb()
-//                climb.name = names[i]
-//                climb.desc = desc
-//                climb.rating = Int(rating[i])
-//            
-//                climbList.append(climb)
-//            }
-//        }
+    }
+    
+    
+    func readDescription(name: String, completionHandler: @escaping (Climb) -> ()) {
         
     }
     
@@ -82,6 +76,8 @@ class ClimbDao {
 //        }
         return true
     }
+    
+    
     
     func delete(item: AnyObject) -> Bool {
         return true

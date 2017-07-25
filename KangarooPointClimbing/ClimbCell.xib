@@ -96,6 +96,7 @@
                 <outlet property="initialLabel" destination="rwI-oY-7a8" id="f3S-A4-O1z"/>
                 <outlet property="initialView" destination="HGv-dG-5cp" id="Oxr-6O-DVK"/>
                 <outlet property="nameLabel" destination="QlJ-p0-KX2" id="uZ0-i4-w4O"/>
+                <outlet property="wallLabel" destination="wJC-YM-xsv" id="CFF-ec-Qdn"/>
             </connections>
             <point key="canvasLocation" x="13.5" y="-40"/>
         </tableViewCell>
