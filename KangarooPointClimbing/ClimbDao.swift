@@ -28,17 +28,17 @@ class ClimbDao {
         return true
     }
     
-    func read(name: String) -> AnyObject {
+    func read(name: String, completionHandler: @escaping (Climb) -> ()) {
         let ref = Database.database().reference()
         let climb = Climb()
         ref.child("climbs").child(name).observeSingleEvent(of: .value, with: { snapshot in
             let snapshotValue = snapshot.value as? [String : AnyObject] ?? [:]
-            climb.name = snapshot.key
+            climb.name = name
             climb.rating = snapshotValue["rating"] as! Int
             climb.wall = snapshotValue["wall"] as! String
             
         })
-        return climb
+        completionHandler(climb)
     }
     
     
@@ -62,9 +62,16 @@ class ClimbDao {
     }
     
     
-    func readDescription(name: String, completionHandler: @escaping (Climb) -> ()) {
-        
+    func readDescription(name: String, completionHandler: @escaping (String) -> ()) {
+        let ref = Database.database().reference()
+        var desc: String = ""
+        ref.child("climbDesc").child(name).observeSingleEvent(of: .value, with: { snapshot in
+            let snapValue = snapshot.value as? [String : String] ?? [:]
+            desc = snapValue["desc"] ?? "No description found"
+            completionHandler(desc)
+        })
     }
+    
     
     func update(item: AnyObject) -> Bool {
 //        if let index = climbList.index(of: item as! Climb) {

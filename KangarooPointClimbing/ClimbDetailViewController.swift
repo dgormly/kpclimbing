@@ -21,7 +21,7 @@ class ClimbDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var locationLabel: UILabel!
     
     var climb = Climb()
-    
+    let climbDao = ClimbDao()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,11 @@ class ClimbDetailViewController: UIViewController, MKMapViewDelegate {
         self.title = climb.name
         locationLabel.text = climb.wall
         difficultyLabel.text = String(climb.rating)
+        
+        climbDao.readDescription(name: climb.name, completionHandler: { desc in
+            self.climb.desc = desc
+            self.descriptionTextField.text = desc
+        })
     }
 
     
