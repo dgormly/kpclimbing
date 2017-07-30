@@ -73,15 +73,10 @@ class ClimbDao {
     }
     
     
-    func update(item: AnyObject) -> Bool {
-//        if let index = climbList.index(of: item as! Climb) {
-//            print("Climb removed")
-//        
-//        } else {
-//            print("Failed to remove climb.")
-//            return false
-//        }
-        return true
+    func update(item: Climb) {
+        let ref = Database.database().reference()
+        ref.child("climbs").child(item.name).removeValue()
+        let _ = self.create(item: item)
     }
     
     

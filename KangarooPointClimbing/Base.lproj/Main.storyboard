@@ -231,6 +231,19 @@
                                     <action selector="submitClimb:" destination="d1U-xC-aj9" eventType="touchUpInside" id="mDn-I3-FsU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLR-ih-ZW8">
+                                <rect key="frame" x="20" y="210" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="d1U-xC-aj9" eventType="touchUpInside" id="9bs-Ge-BGw"/>
+                                    <action selector="submitClimb:" destination="d1U-xC-aj9" eventType="touchUpInside" id="UWV-U9-rpl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -423,7 +436,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="EgL-4u-Snv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="4KT-rI-Hfg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="4KT-rI-Hfg">
+                            <connections>
+                                <segue destination="d1U-xC-aj9" kind="presentation" identifier="editSegue" id="2rw-et-q3P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -518,4 +535,7 @@
             <point key="canvasLocation" x="2920.8000000000002" y="513.19340329835086"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2rw-et-q3P"/>
+    </inferredMetricsTieBreakers>
 </document>

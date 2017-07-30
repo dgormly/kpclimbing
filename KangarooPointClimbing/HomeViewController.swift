@@ -24,15 +24,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         table.register(nib, forCellReuseIdentifier: "climbCell")
         
         activityIndicatorView.startAnimating()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
         // Load climbs
         climbDao.readAll(completionHandler: { climb in
             self.climbList = climb
             self.table.reloadData()
             self.activityIndicatorView.stopAnimating()
         })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
     }
     
     // MARK: Must implement these.

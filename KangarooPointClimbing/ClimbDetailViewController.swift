@@ -46,7 +46,13 @@ class ClimbDetailViewController: UIViewController, MKMapViewDelegate {
         annotation.coordinate = coordinate
         mapView.addAnnotation(annotation)
         mapView.setRegion(region, animated: true)
-        
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editSegue" {
+            let dvc = segue.destination as! NewClimbController
+            dvc.climb = climb
+        }
+    }
 }

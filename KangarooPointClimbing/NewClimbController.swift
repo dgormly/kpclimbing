@@ -15,12 +15,21 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var location = CLLocation()
     var climbDao = ClimbDao()
+    var climb = Climb()
+    
     
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var wallNameTextfield: UITextField!
     @IBOutlet weak var difTextfield: UITextField!
     @IBOutlet weak var locationButton: UIButton!
     
+
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // TODO -  Implement function to grab the users' current location.
     @IBAction func getLocation(_ sender: Any) {
         
     }
@@ -29,7 +38,6 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
         let name = nameTextfield.text
         let wallName = wallNameTextfield.text
         let dif = Int(difTextfield.text!)
-        let climb = Climb()
         
         climb.name = name!
         climb.rating = dif!
@@ -46,6 +54,12 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !self.climb.isEqual(Climb()) {
+            nameTextfield.text = climb.name
+            wallNameTextfield.text = climb.wall
+            difTextfield.text = String(climb.rating)
+        }
         
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
