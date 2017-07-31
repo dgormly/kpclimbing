@@ -241,7 +241,6 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelButton:" destination="d1U-xC-aj9" eventType="touchUpInside" id="9bs-Ge-BGw"/>
-                                    <action selector="submitClimb:" destination="d1U-xC-aj9" eventType="touchUpInside" id="UWV-U9-rpl"/>
                                 </connections>
                             </button>
                         </subviews>
