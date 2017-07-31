@@ -14,5 +14,7 @@ class Climb : NSObject {
     var desc: String = ""
     var rating: Int = 0
     var wall: String = ""
+    var longLoc: Double = 0
+    var latLoc: Double = 0
     
 } 

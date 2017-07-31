@@ -14,18 +14,17 @@
 		A30FB8451F122847009BC9A7 /* ClimbDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FB8441F122847009BC9A7 /* ClimbDao.swift */; };
 		A30FB8471F122855009BC9A7 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FB8461F122855009BC9A7 /* Dao.swift */; };
 		A30FB84A1F123A94009BC9A7 /* Climb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30FB8491F123A94009BC9A7 /* Climb.swift */; };
+		A3299C601F2F5DD400D32E88 /* ClimbDescDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3299C5F1F2F5DD400D32E88 /* ClimbDescDao.swift */; };
 		A32C35291ED41B2B003832A0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C35281ED41B2B003832A0 /* FBSDKLoginKit.framework */; };
 		A32C352B1ED41B5A003832A0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C352A1ED41B5A003832A0 /* FBSDKCoreKit.framework */; };
 		A32C352D1ED41BCF003832A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C352C1ED41BCF003832A0 /* Bolts.framework */; };
-		A32C35301ED51408003832A0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C352F1ED51408003832A0 /* MapViewController.swift */; };
 		A32C35321ED5208F003832A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32C35311ED5208F003832A0 /* MapKit.framework */; };
-		A32C35341ED53568003832A0 /* ClimbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32C35331ED53568003832A0 /* ClimbData.swift */; };
 		A340AE151F053A4800913902 /* ClimbCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340AE141F053A4800913902 /* ClimbCellController.swift */; };
 		A340FB211F16527100C86380 /* NewClimbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FB201F16527000C86380 /* NewClimbController.swift */; };
 		A34A0F6A1EF9223F003CA246 /* ClimbDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */; };
 		A37710711F05239300D65507 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37710701F05239300D65507 /* HomeViewController.swift */; };
 		A3B8958E1ED4106D00C0209D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958D1ED4106D00C0209D /* AppDelegate.swift */; };
-		A3B895901ED4106D00C0209D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958F1ED4106D00C0209D /* ViewController.swift */; };
+		A3B895901ED4106D00C0209D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B8958F1ED4106D00C0209D /* LoginViewController.swift */; };
 		A3B895931ED4106D00C0209D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B895911ED4106D00C0209D /* Main.storyboard */; };
 		A3B895961ED4106D00C0209D /* KangarooPointClimbing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3B895941ED4106D00C0209D /* KangarooPointClimbing.xcdatamodeld */; };
 		A3B895981ED4106D00C0209D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B895971ED4106D00C0209D /* Assets.xcassets */; };
@@ -64,20 +63,19 @@
 		A30FB8441F122847009BC9A7 /* ClimbDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbDao.swift; sourceTree = "<group>"; };
 		A30FB8461F122855009BC9A7 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		A30FB8491F123A94009BC9A7 /* Climb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Climb.swift; sourceTree = "<group>"; };
+		A3299C5F1F2F5DD400D32E88 /* ClimbDescDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbDescDao.swift; sourceTree = "<group>"; };
 		A32C35281ED41B2B003832A0 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A32C352A1ED41B5A003832A0 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A32C352C1ED41BCF003832A0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 		A32C352E1ED50EA6003832A0 /* KangarooPointClimbing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KangarooPointClimbing.entitlements; sourceTree = "<group>"; };
-		A32C352F1ED51408003832A0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A32C35311ED5208F003832A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		A32C35331ED53568003832A0 /* ClimbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClimbData.swift; path = KangarooPointClimbing/ClimbData.swift; sourceTree = "<group>"; };
 		A340AE141F053A4800913902 /* ClimbCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbCellController.swift; sourceTree = "<group>"; };
 		A340FB201F16527000C86380 /* NewClimbController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewClimbController.swift; sourceTree = "<group>"; };
 		A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbDetailViewController.swift; sourceTree = "<group>"; };
 		A37710701F05239300D65507 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3B8958A1ED4106D00C0209D /* KangarooPointClimbing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KangarooPointClimbing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B8958D1ED4106D00C0209D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3B8958F1ED4106D00C0209D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3B8958F1ED4106D00C0209D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A3B895921ED4106D00C0209D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B895951ED4106D00C0209D /* KangarooPointClimbing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KangarooPointClimbing.xcdatamodel; sourceTree = "<group>"; };
 		A3B895971ED4106D00C0209D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,8 +165,7 @@
 				A340AE141F053A4800913902 /* ClimbCellController.swift */,
 				A37710701F05239300D65507 /* HomeViewController.swift */,
 				A34A0F691EF9223F003CA246 /* ClimbDetailViewController.swift */,
-				A32C352F1ED51408003832A0 /* MapViewController.swift */,
-				A3B8958F1ED4106D00C0209D /* ViewController.swift */,
+				A3B8958F1ED4106D00C0209D /* LoginViewController.swift */,
 				A340FB201F16527000C86380 /* NewClimbController.swift */,
 			);
 			name = controllers;
@@ -179,6 +176,7 @@
 			children = (
 				A30FB8441F122847009BC9A7 /* ClimbDao.swift */,
 				A30FB8461F122855009BC9A7 /* Dao.swift */,
+				A3299C5F1F2F5DD400D32E88 /* ClimbDescDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -186,7 +184,6 @@
 		A30FB8481F123A83009BC9A7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				A32C35331ED53568003832A0 /* ClimbData.swift */,
 				A30FB8491F123A94009BC9A7 /* Climb.swift */,
 			);
 			name = Entities;
@@ -549,13 +546,12 @@
 				A3B895961ED4106D00C0209D /* KangarooPointClimbing.xcdatamodeld in Sources */,
 				A340AE151F053A4800913902 /* ClimbCellController.swift in Sources */,
 				A34A0F6A1EF9223F003CA246 /* ClimbDetailViewController.swift in Sources */,
-				A3B895901ED4106D00C0209D /* ViewController.swift in Sources */,
+				A3B895901ED4106D00C0209D /* LoginViewController.swift in Sources */,
 				A340FB211F16527100C86380 /* NewClimbController.swift in Sources */,
+				A3299C601F2F5DD400D32E88 /* ClimbDescDao.swift in Sources */,
 				A3B8958E1ED4106D00C0209D /* AppDelegate.swift in Sources */,
-				A32C35301ED51408003832A0 /* MapViewController.swift in Sources */,
 				A30FB84A1F123A94009BC9A7 /* Climb.swift in Sources */,
 				A37710711F05239300D65507 /* HomeViewController.swift in Sources */,
-				A32C35341ED53568003832A0 /* ClimbData.swift in Sources */,
 				A30FB8471F122855009BC9A7 /* Dao.swift in Sources */,
 				A30FB8451F122847009BC9A7 /* ClimbDao.swift in Sources */,
 			);

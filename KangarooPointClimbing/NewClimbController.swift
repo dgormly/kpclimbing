@@ -13,9 +13,10 @@ import CoreLocation
 class NewClimbController : UIViewController, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
-    var location = CLLocation()
     var climbDao = ClimbDao()
     var climb = Climb()
+    
+    var location: CLLocationCoordinate2D!
     
     
     @IBOutlet weak var nameTextfield: UITextField!
@@ -42,6 +43,8 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
         climb.name = name!
         climb.rating = dif!
         climb.wall = wallName!
+        climb.longLoc = location.longitude
+        climb.latLoc = location.latitude
         
         let climbStatus = climbDao.create(item: climb)
         if climbStatus {
@@ -58,7 +61,6 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
         if !self.climb.isEqual(Climb()) {
             nameTextfield.text = climb.name
             wallNameTextfield.text = climb.wall
-            difTextfield.text = String(climb.rating)
         }
         
         if (CLLocationManager.locationServicesEnabled()) {
@@ -67,6 +69,15 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        climb.longLoc = (manager.location?.coordinate.longitude)!
+        climb.latLoc = (manager.location?.coordinate.latitude)!
+        
+        print("location: \(self.climb.latLoc) \(self.climb.longLoc)")
+        manager.stopUpdatingLocation()
     }
     
 }
