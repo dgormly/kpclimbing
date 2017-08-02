@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class NewClimbController : UIViewController, CLLocationManagerDelegate {
+class NewClimbController : UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var locationManager = CLLocationManager()
     var climbDao = ClimbDao()
@@ -23,6 +23,7 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var wallNameTextfield: UITextField!
     @IBOutlet weak var difTextfield: UITextField!
     @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
     
 
     @IBAction func cancelButton(_ sender: Any) {
@@ -58,6 +59,8 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.delegate = self
+        
         if !self.climb.isEqual(Climb()) {
             nameTextfield.text = climb.name
             wallNameTextfield.text = climb.wall
@@ -71,6 +74,12 @@ class NewClimbController : UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    
+    func loadMap() {
+       let userLocation = mapView.userLocation.coordinate
+        let region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        mapView.region = region
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         climb.longLoc = (manager.location?.coordinate.longitude)!

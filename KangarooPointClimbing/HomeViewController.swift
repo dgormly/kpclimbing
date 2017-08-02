@@ -6,15 +6,24 @@
 //  Copyright © 2017 Daniel Gormly. All rights reserved.
 //
 import UIKit
+import FBSDKLoginKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var cell: UITableViewCell!
+    @IBAction func logout(_ sender: Any) {
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        performSegue(withIdentifier: "logoutSegue", sender: nil)
+    }
+    
     
     let climbDao = ClimbDao()
     var climbList = [Climb]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +42,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     // MARK: Must implement these.
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return climbList.count
     }

@@ -11,7 +11,7 @@ import FacebookLogin
 import FacebookCore
 import FirebaseAuth
 
-class ViewController: UIViewController, LoginButtonDelegate {
+class LoginViewController: UIViewController, LoginButtonDelegate {
 
     let loginButton = LoginButton(readPermissions: [ .publicProfile ])
     

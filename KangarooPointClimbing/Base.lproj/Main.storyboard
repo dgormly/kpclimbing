@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KangarooPointClimbing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="KangarooPointClimbing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -96,6 +96,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Climbs" id="vtK-Oa-aCb">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="FNh-45-muO">
+                            <connections>
+                                <action selector="logout:" destination="Vom-Z1-cIW" id="fm8-MY-nS0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4Tu-h0-g4I">
                             <connections>
                                 <segue destination="d1U-xC-aj9" kind="presentation" id="3Sw-eX-RGE"/>
@@ -106,6 +111,7 @@
                         <outlet property="activityIndicatorView" destination="Iuu-MV-oPh" id="aKt-Ia-F3p"/>
                         <outlet property="table" destination="ckS-qa-voH" id="O2g-6Z-aCe"/>
                         <segue destination="1Lb-S6-hq2" kind="show" identifier="showClimbSegue" id="bhT-nf-RsH"/>
+                        <segue destination="Y6t-NX-1kY" kind="show" id="7DO-GR-ygi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT5-hE-gUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,8 +130,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-k3-MpV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                            </mapView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hak-RY-Gjq">
-                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                <rect key="frame" x="20" y="338" width="374" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" selected="YES"/>
                                 </accessibility>
@@ -134,35 +143,47 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Difficulty" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjR-Po-S2W">
-                                <rect key="frame" x="20" y="58" width="374" height="30"/>
+                                <rect key="frame" x="20" y="376" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wall Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTh-Tf-KCN">
-                                <rect key="frame" x="20" y="96" width="374" height="30"/>
+                                <rect key="frame" x="20" y="414" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOz-oJ-Wus">
-                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                <rect key="frame" x="20" y="452" width="374" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitClimb:" destination="d1U-xC-aj9" eventType="touchUpInside" id="mDn-I3-FsU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLR-ih-ZW8">
-                                <rect key="frame" x="20" y="172" width="374" height="30"/>
+                                <rect key="frame" x="20" y="490" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelButton:" destination="d1U-xC-aj9" eventType="touchUpInside" id="9bs-Ge-BGw"/>
                                 </connections>
@@ -170,25 +191,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hTh-Tf-KCN" firstAttribute="leading" secondItem="NOz-oJ-Wus" secondAttribute="leading" id="60Z-wW-1HA"/>
-                            <constraint firstItem="NOz-oJ-Wus" firstAttribute="trailing" secondItem="GLR-ih-ZW8" secondAttribute="trailing" id="F2A-hF-iMJ"/>
-                            <constraint firstItem="GLR-ih-ZW8" firstAttribute="top" secondItem="NOz-oJ-Wus" secondAttribute="bottom" constant="8" symbolic="YES" id="Haj-rQ-Hvp"/>
-                            <constraint firstItem="hak-RY-Gjq" firstAttribute="leading" secondItem="hjR-Po-S2W" secondAttribute="leading" id="Nfe-Qc-k80"/>
-                            <constraint firstItem="hak-RY-Gjq" firstAttribute="trailing" secondItem="hjR-Po-S2W" secondAttribute="trailing" id="Of4-oK-jlQ"/>
-                            <constraint firstItem="NOz-oJ-Wus" firstAttribute="top" secondItem="hTh-Tf-KCN" secondAttribute="bottom" constant="8" symbolic="YES" id="Qq4-nS-rTr"/>
-                            <constraint firstItem="hjR-Po-S2W" firstAttribute="leading" secondItem="hTh-Tf-KCN" secondAttribute="leading" id="RU0-1b-9ay"/>
-                            <constraint firstItem="NOz-oJ-Wus" firstAttribute="leading" secondItem="GLR-ih-ZW8" secondAttribute="leading" id="Uz7-De-j0j"/>
-                            <constraint firstItem="hak-RY-Gjq" firstAttribute="top" secondItem="RTQ-21-WHz" secondAttribute="bottom" id="ao1-kB-WaQ"/>
-                            <constraint firstItem="hjR-Po-S2W" firstAttribute="top" secondItem="hak-RY-Gjq" secondAttribute="bottom" constant="8" symbolic="YES" id="d8q-vo-Yfk"/>
-                            <constraint firstItem="hjR-Po-S2W" firstAttribute="trailing" secondItem="hTh-Tf-KCN" secondAttribute="trailing" id="dLe-O1-7K7"/>
-                            <constraint firstItem="hTh-Tf-KCN" firstAttribute="trailing" secondItem="NOz-oJ-Wus" secondAttribute="trailing" id="kV2-wA-LjG"/>
-                            <constraint firstItem="hTh-Tf-KCN" firstAttribute="top" secondItem="hjR-Po-S2W" secondAttribute="bottom" constant="8" symbolic="YES" id="l6E-Q4-8Bc"/>
-                            <constraint firstItem="hak-RY-Gjq" firstAttribute="leading" secondItem="qfy-uC-NEu" secondAttribute="leadingMargin" id="mT2-Ob-NFv"/>
-                            <constraint firstItem="hak-RY-Gjq" firstAttribute="trailing" secondItem="qfy-uC-NEu" secondAttribute="trailingMargin" id="w4F-L6-XUE"/>
+                            <constraint firstItem="hTh-Tf-KCN" firstAttribute="leading" secondItem="NOz-oJ-Wus" secondAttribute="leading" id="1Gp-KO-zZU"/>
+                            <constraint firstItem="GLR-ih-ZW8" firstAttribute="top" secondItem="NOz-oJ-Wus" secondAttribute="bottom" constant="8" symbolic="YES" id="33M-x2-O7U"/>
+                            <constraint firstItem="hak-RY-Gjq" firstAttribute="top" secondItem="aOe-k3-MpV" secondAttribute="bottom" constant="8" symbolic="YES" id="5ng-dj-D5a"/>
+                            <constraint firstItem="NOz-oJ-Wus" firstAttribute="leading" secondItem="GLR-ih-ZW8" secondAttribute="leading" id="B0c-h2-Wbb"/>
+                            <constraint firstItem="hjR-Po-S2W" firstAttribute="leading" secondItem="hTh-Tf-KCN" secondAttribute="leading" id="Hy4-cm-t8n"/>
+                            <constraint firstItem="hak-RY-Gjq" firstAttribute="leading" secondItem="qfy-uC-NEu" secondAttribute="leadingMargin" id="Irf-2P-cLR"/>
+                            <constraint firstItem="hjR-Po-S2W" firstAttribute="trailing" secondItem="hTh-Tf-KCN" secondAttribute="trailing" id="J8U-YO-kgT"/>
+                            <constraint firstAttribute="trailing" secondItem="aOe-k3-MpV" secondAttribute="trailing" id="VXh-bk-uvt"/>
+                            <constraint firstItem="NOz-oJ-Wus" firstAttribute="trailing" secondItem="GLR-ih-ZW8" secondAttribute="trailing" id="Ygd-ca-tRd"/>
+                            <constraint firstItem="aOe-k3-MpV" firstAttribute="top" secondItem="qfy-uC-NEu" secondAttribute="top" id="ZlO-Ps-Q9z"/>
+                            <constraint firstItem="hTh-Tf-KCN" firstAttribute="trailing" secondItem="NOz-oJ-Wus" secondAttribute="trailing" id="bBF-5P-aZu"/>
+                            <constraint firstItem="aOe-k3-MpV" firstAttribute="leading" secondItem="qfy-uC-NEu" secondAttribute="leading" id="bUW-d9-PJg"/>
+                            <constraint firstItem="UVx-53-32c" firstAttribute="top" secondItem="GLR-ih-ZW8" secondAttribute="bottom" constant="216" id="dFd-Ak-Sq2"/>
+                            <constraint firstItem="hak-RY-Gjq" firstAttribute="leading" secondItem="hjR-Po-S2W" secondAttribute="leading" id="gal-03-e9i"/>
+                            <constraint firstItem="hTh-Tf-KCN" firstAttribute="top" secondItem="hjR-Po-S2W" secondAttribute="bottom" constant="8" symbolic="YES" id="gpy-Hh-pWk"/>
+                            <constraint firstItem="hjR-Po-S2W" firstAttribute="top" secondItem="hak-RY-Gjq" secondAttribute="bottom" constant="8" symbolic="YES" id="mdP-Hn-Nf6"/>
+                            <constraint firstItem="aOe-k3-MpV" firstAttribute="centerX" secondItem="hak-RY-Gjq" secondAttribute="centerX" id="nMW-1i-c1q"/>
+                            <constraint firstItem="hak-RY-Gjq" firstAttribute="trailing" secondItem="hjR-Po-S2W" secondAttribute="trailing" id="oiu-CH-3Me"/>
+                            <constraint firstItem="NOz-oJ-Wus" firstAttribute="top" secondItem="hTh-Tf-KCN" secondAttribute="bottom" constant="8" symbolic="YES" id="yXV-e0-oaP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="difTextfield" destination="hjR-Po-S2W" id="aXO-Fg-Ohp"/>
+                        <outlet property="mapView" destination="aOe-k3-MpV" id="0jA-cE-T10"/>
                         <outlet property="nameTextfield" destination="hak-RY-Gjq" id="ZBp-b7-pgY"/>
                         <outlet property="wallNameTextfield" destination="hTh-Tf-KCN" id="6V8-7U-SX0"/>
                     </connections>
@@ -270,6 +296,12 @@
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -302,6 +334,12 @@
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -432,7 +470,7 @@
         <!--Navigation Controller-->
         <scene sceneID="so2-W5-gH1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="Y6t-NX-1kY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y6t-NX-1kY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="RAH-T8-Og0"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -460,6 +498,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="pOo-eL-8qQ"/>
         <segue reference="2rw-et-q3P"/>
     </inferredMetricsTieBreakers>
 </document>
